@@ -1,12 +1,13 @@
 import React from 'react';
-import FloatingMenu from './FloatingMenu';
+import FloatMenu from './FloatMenu/FloatMenu.jsx';
+import './Menu.scss';
 
 function Menu() {
 	return (
 		<div className="menu">
 			<div className="menu__body">
-				<div className="scroll-ad-position"></div>
-				<FloatingMenu />
+				<div className="menu__position"></div>
+				<FloatMenu />
 			</div>
 		</div>
 	);
