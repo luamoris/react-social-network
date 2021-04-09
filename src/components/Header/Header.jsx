@@ -1,9 +1,13 @@
 import React from 'react';
 import './Header.scss';
 
-function Header() {
+const Header = () => {
 	return (
-		<header className="header"></header>
+		<header className="header">
+			<div className="header__body">
+				Header
+			</div>
+		</header>
 	);
 };
 

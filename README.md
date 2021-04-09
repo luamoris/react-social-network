@@ -1,13 +1,20 @@
-## Project Name
-
+## REACT SOCIAL NETWORK
+__`Project - training`__
 
 ### Links
 
 > + [Source code on GitHub][solution-repository]
 <!-- > + [Live Site][deploy] -->
 
+### Content
+> + [Install](#Install)
+> + [Explored](#Explored)
+> + [Process](#Process)
+
 
 ---
+
+## Install
 
 
 #### Get `started`
@@ -45,7 +52,124 @@
 ---
 
 
-## My process
+
+## Explored
+
+> ### Content
+> + [Style Modules](#style-modules)
+> + [Prop Types](#prop-types)
+> + [Browser Router](#browser-router)
+<!-- > + [](#) -->
+
+
+#### Style Modules
+```css
+	/* App.module.css */
+
+	.app {
+		width: 100%;
+		height: 100vh;
+	}
+
+	.content {
+		margin: auto;
+		width: 500px;
+		height: 300px;
+		background-color: #d64545;
+	}
+```
+```jsx
+	/* App.jsx */
+
+	import React from 'react';
+	import style from 'App.module.css'
+
+	/*
+	* style.app: App_app__[hash:5]
+	* style.content: App_content__[hash:5]
+	*/
+
+	const App = () => {
+		return (
+			<div className={style.app}>
+				<div className={style.content}></div>
+			</div>
+		);
+	};
+
+	export default App;
+```
+
+
+#### Prop Types
+```console
+	npm install prop-types
+```
+```jsx
+	import PropTypes from 'prop-types';
+
+	const Item = (props) => {
+		return (
+			<div className="item">
+				<a href={ props.link }>{ props.title }</a>
+			</div>
+		);
+	};
+
+	Item.propTypes = {
+		link: PropTypes.string.isRequired,
+		title: PropTypes.string.isRequired,
+	};
+```
+```jsx
+	PropTypes = {
+		string, 		// string
+		number, 		// integer, float
+		object, 		// object {}
+		objectOf(), 	// type of fields does the object have
+		array, 			// array []
+		arrayOf(), 		// type of fields does the array have
+
+		isRequired, 	// ???
+	}
+```
+
+
+#### Browser Router
+```console
+	npm install react-router-dom
+```
+```jsx
+	import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+
+	const Profile = () => ( <div className="profile"></div> );
+	const About = () => ( <div className="about"></div> );
+
+	const App = () => {
+		return (
+			<BrowserRouter>
+				<div className="app">
+					<div className="links">
+						<NavLink to="/profile" activeClassName="active">Profile</NavLink>
+						<NavLink to="/about" activeClassName="active">About</NavLink>
+					</div>
+					<div className="content">
+						<Route path="/profile" component={Profile} />
+						<Route path="/about" component={About} />
+					</div>
+				</div>
+			</BrowserRouter>
+		);
+	};
+```
+
+
+
+---
+
+
+
+## Process
 
 ### Built with
 

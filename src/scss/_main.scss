@@ -1,6 +1,5 @@
 
 /* Wrapper */
-
 #wrapper {
 	width: 100%;
 }
@@ -12,7 +11,7 @@
 	&__body {
 		display: grid;
 		grid-gap: 10px;
-		grid-template: 60px 1fr 30px / 300px 1fr;
+		grid-template: 50px 1fr 30px / 300px 1fr;
 		grid-template-areas:
 			"header header"
 			"menu content"
@@ -20,9 +19,20 @@
 		width: 100%;
 	}
 
-	.conteiner {
+	.container {
 		margin: 0 auto;
 		padding: 0 10px;
 		max-width: 1400px;
+	}
+}
+
+// Content
+.content {
+	grid-area: content;
+	min-height: calc(100vh - 100px);
+
+	&__body {
+		padding-top: 10px;
+		height: 100%;
 	}
 }

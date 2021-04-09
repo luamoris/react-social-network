@@ -3,5 +3,13 @@
 
 .footer {
 	grid-area: footer;
-	background-color: var(--main);
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		height: 100%;
+		font-size: 14px;
+	}
 }

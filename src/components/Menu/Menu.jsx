@@ -2,7 +2,7 @@ import React from 'react';
 import FloatMenu from './FloatMenu/FloatMenu.jsx';
 import './Menu.scss';
 
-function Menu() {
+const Menu = () => {
 	return (
 		<div className="menu">
 			<div className="menu__body">
