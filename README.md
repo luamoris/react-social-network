@@ -126,11 +126,11 @@ __`Project - training`__
 		string, 		// string
 		number, 		// integer, float
 		object, 		// object {}
-		objectOf(), 	// type of fields does the object have
+		objectOf(),		// type of fields does the object have
 		array, 			// array []
 		arrayOf(), 		// type of fields does the array have
 
-		isRequired, 	// ???
+		isRequired,		// ???
 	}
 ```
 
